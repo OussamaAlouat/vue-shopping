@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <v-container>
     <h2> List of products </h2>
     <div v-if="!products.length" class="spinner">
       <v-progress-circular
@@ -19,7 +19,7 @@
         />
       </div>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -43,6 +43,9 @@ export default {
   height: 100%;
 }
 h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
   margin-bottom: 1.5rem;
 }
 .spinner {
