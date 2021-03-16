@@ -34,12 +34,19 @@
       >
         {{ showDescription ? 'Hide' : 'Show more' }} description
       </v-btn>
+      <v-btn
+        @click="add()"
+      >
+        Buy
+      </v-btn>
     </v-card-actions>
 
   </v-card>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Product',
   props: {
@@ -52,6 +59,13 @@ export default {
     return {
       showDescription: false,
     };
+  },
+
+  methods: {
+    ...mapActions(['addToShoppingCart']),
+    add() {
+      this.addToShoppingCart({ product: this.product });
+    },
   },
 };
 </script>
