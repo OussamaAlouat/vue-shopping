@@ -1,12 +1,15 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import Product from '../../src/components/Product.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg },
+describe('Product.vue', () => {
+  it('renders', () => {
+    const product = {
+      image_url: ''
+    };
+    const wrapper = shallowMount(Product, {
+      propsData: { product },
     });
-    expect(wrapper.text()).toMatch(msg);
+
+    expect(wrapper.isVueInstance()).toBeTruthy();
   });
 });
