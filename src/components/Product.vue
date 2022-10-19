@@ -8,8 +8,7 @@
     <v-img
       :src="product.image_url"
       height="200px"
-    >
-    </v-img>
+    />
 
     <v-card-title>
       {{ product.productName }}

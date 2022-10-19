@@ -7,12 +7,12 @@
         :width="7"
         :size="70"
         color="primary"
-      >
-      </v-progress-circular>
+      />
     </div>
     <v-row v-else>
       <div
-        v-for="product of products" :key="product.id"
+        v-for="product of products"
+        :key="product.id"
       >
         <product
           :product="product"
